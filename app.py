@@ -11,8 +11,10 @@ def kmeans_clustering(url, k):
     # select only the columns that have a numeric data type
     numeric_cols = df.select_dtypes(include=["int", "float"]).columns.tolist()
 
+
     # create a new DataFrame with only the selected columns
     df = df[numeric_cols]
+    df = df.dropna()
 
     # perform K-Means clustering on the data with K equals to k
     kmeans = KMeans(n_clusters=k)
