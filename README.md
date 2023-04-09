@@ -1,3 +1,1 @@
-# dse
-# hackfest
 # hackfest
